@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Health360</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="admin-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2>Health360</h2>
+        <p>Admin Panel</p>
+      </div>
+      <ul class="sidebar-menu">
+        <li class="active">🏠 Dashboard</li>
+        <li>🧑‍⚕️ Manage Users</li>
+        <li>🏥 Pharmacies</li>
+        <li>💊 Medicine Stocks</li>
+        <li>📈 Reports</li>
+        <li>⚙️ Settings</li>
+        <li id="logoutBtn">🚪 Logout</li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="dashboard-main">
+      <header class="admin-header">
+        <h1>Welcome, Admin 👨‍💼</h1>
+        <p>Monitor your pharmacy network and healthcare activities.</p>
+      </header>
+
+      <!-- Stats -->
+      <section class="stats">
+        <div class="stat-card">
+          <h3>Total Users</h3>
+          <p class="stat-value">2,500</p>
+          <span class="stat-change up">↑ 5% from last week</span>
+        </div>
+        <div class="stat-card">
+          <h3>Total Pharmacies</h3>
+          <p class="stat-value">180</p>
+          <span class="stat-change up">↑ 3% growth</span>
+        </div>
+        <div class="stat-card">
+          <h3>Total Medicines</h3>
+          <p class="stat-value">5,320</p>
+          <span class="stat-change down">↓ 2% sold out</span>
+        </div>
+        <div class="stat-card">
+          <h3>Inventory Alerts</h3>
+          <p class="stat-value">27</p>
+          <span class="stat-change down">↓ Needs refill</span>
+        </div>
+      </section>
+
+      <!-- Charts Section -->
+      <section class="charts">
+        <div class="chart-card">
+          <h3>Medicine Sales Trend</h3>
+          <canvas id="salesChart"></canvas>
+        </div>
+        <div class="chart-card">
+          <h3>Top Used Medicines</h3>
+          <canvas id="medicineChart"></canvas>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+
+  <script>
+    // Chart 1: Medicine Sales Trend
+    const ctx1 = document.getElementById('salesChart');
+    new Chart(ctx1, {
+      type: 'line',
+      data: {
+        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+        datasets: [{
+          label: 'Medicines Sold',
+          data: [120, 190, 150, 200, 220, 180, 240],
+          borderColor: '#00bfff',
+          backgroundColor: 'rgba(0,191,255,0.2)',
+          fill: true,
+          tension: 0.3
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: { y: { beginAtZero: true } }
+      }
+    });
+
+    // Chart 2: Top Used Medicines
+    const ctx2 = document.getElementById('medicineChart');
+    new Chart(ctx2, {
+      type: 'doughnut',
+      data: {
+        labels: ['Paracetamol', 'Vitamin C', 'Amoxicillin', 'Ibuprofen', 'Cetirizine'],
+        datasets: [{
+          data: [35, 25, 15, 15, 10],
+          backgroundColor: ['#007bff','#00c2ff','#33d9b2','#ffb142','#ff5252']
+        }]
+      },
+      options: { responsive: true, plugins: { legend: { position: 'bottom' } } }
+    });
+  </script>
+</body>
+</html>

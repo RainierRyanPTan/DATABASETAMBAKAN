@@ -1,0 +1,305 @@
+/* ======================================
+   Health360 — Global CSS
+   Applies to User, Admin, and Pharmacy
+   ====================================== */
+
+:root {
+  --primary: #0078d7;        /* Main blue */
+  --primary-dark: #005ea2;
+  --light-bg: #f5f8fa;
+  --white: #ffffff;
+  --text: #222222;
+  --gray: #888888;
+  --border: #e0e0e0;
+  --success: #34c759;
+  --danger: #ff3b30;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+  background-color: var(--white);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar h2 {
+  font-size: 1.5rem;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.logout-btn {
+  background-color: var(--danger);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #d92b2b;
+}
+
+/* ---------- MAIN CONTENT ---------- */
+.content {
+  padding: 40px;
+  background-color: var(--light-bg);
+  min-height: 100vh;
+}
+
+.content h1 {
+  margin-bottom: 15px;
+  color: var(--primary-dark);
+}
+
+.content p {
+  color: var(--gray);
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* ---------- TABS ---------- */
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  border: 1px solid var(--primary);
+  background-color: var(--white);
+  color: var(--primary-dark);
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.tab-btn.active,
+.tab-btn:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+/* ---------- PRODUCT CARDS ---------- */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  color: var(--primary-dark);
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: var(--gray);
+  margin-bottom: 10px;
+}
+
+.card button {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.card button:hover {
+  background-color: var(--primary-dark);
+}
+
+/* ---------- NOTIFICATIONS ---------- */
+.notifications-list {
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 20px;
+  list-style: none;
+}
+
+.notifications-list li {
+  padding: 12px 10px;
+  border-bottom: 1px solid var(--border);
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.notifications-list li:last-child {
+  border-bottom: none;
+}
+
+/* ---------- CART ---------- */
+.cart-list {
+  list-style: none;
+  background-color: var(--white);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.cart-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  padding: 12px 0;
+  color: var(--text);
+}
+
+.cart-list li:last-child {
+  border-bottom: none;
+}
+
+.cart-list button {
+  background-color: var(--danger);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.cart-list button:hover {
+  background-color: #c12a2a;
+}
+
+.checkout-btn {
+  margin-top: 20px;
+  background-color: var(--success);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.checkout-btn:hover {
+  background-color: #28a745;
+}
+
+/* ---------- ADMIN DASHBOARD ---------- */
+.dashboard {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebar h3 {
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.sidebar-menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar-menu li {
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.sidebar-menu li.active,
+.sidebar-menu li:hover {
+  background-color: var(--white);
+  color: var(--primary-dark);
+  font-weight: 600;
+}
+
+.dashboard-content {
+  background-color: var(--light-bg);
+  padding: 40px;
+}
+
+.dashboard-content h1 {
+  color: var(--primary-dark);
+  margin-bottom: 10px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+}

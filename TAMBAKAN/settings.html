@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings | Health360</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="admin-container">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2>Health360</h2>
+        <p>Admin Panel</p>
+      </div>
+      <ul class="sidebar-menu">
+        <li onclick="window.location='admin.html'">🏠 Dashboard</li>
+        <li onclick="window.location='manage-users.html'">🧑‍⚕️ Manage Users</li>
+        <li onclick="window.location='pharmacies.html'">🏥 Pharmacies</li>
+        <li onclick="window.location='medicine-stocks.html'">💊 Medicine Stocks</li>
+        <li onclick="window.location='reports.html'">📈 Reports</li>
+        <li class="active">⚙️ Settings</li>
+        <li id="logoutBtn">🚪 Logout</li>
+      </ul>
+    </aside>
+
+    <main class="dashboard-main">
+      <header class="admin-header">
+        <h1>Settings</h1>
+        <p>Update your admin account or system preferences.</p>
+      </header>
+
+      <section class="settings-section">
+        <form>
+          <label>Admin Name</label>
+          <input type="text" placeholder="Enter new name">
+
+          <label>Email</label>
+          <input type="email" placeholder="admin@health360.com">
+
+          <label>Password</label>
+          <input type="password" placeholder="New password">
+
+          <button type="submit">Save Changes</button>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

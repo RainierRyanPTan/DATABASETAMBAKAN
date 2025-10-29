@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Health360 | User Dashboard</title>
+  <link rel="stylesheet" href="medicine.css" />
+</head>
+<body>
+  <header>
+    <h1>Health360 Pharmacy</h1>
+    <div class="top-buttons">
+      <button id="homeBtn">Home</button>
+      <button id="profileBtn">Profile</button>
+      <button id="notificationsBtn">Notifications</button>
+      <button id="cartBtn">Cart (<span id="cartCount">0</span>)</button>
+      <button id="logoutBtn" class="logout-btn">Logout</button>
+    </div>
+  </header>
+
+  <section class="categories">
+    <button class="category active" data-category="all">All</button>
+    <button class="category" data-category="general">General</button>
+    <button class="category" data-category="sanitizer">Sanitizer</button>
+    <button class="category" data-category="protein">Protein</button>
+    <button class="category" data-category="homeSafe">Home Safe</button>
+  </section>
+
+  <section id="productList" class="product-list">
+    <!-- GENERAL MEDICINES -->
+    <div class="product-card general">
+      <img src="paracetamol.jpg" alt="Paracetamol">
+      <h3>Paracetamol</h3>
+      <p>₱25.00</p>
+      <button onclick="addToCart('Paracetamol', 25)">Add to Cart</button>
+    </div>
+
+    <div class="product-card general">
+      <img src="ibuprofen.jpg" alt="Ibuprofen">
+      <h3>Ibuprofen</h3>
+      <p>₱30.00</p>
+      <button onclick="addToCart('Ibuprofen', 30)">Add to Cart</button>
+    </div>
+
+    <div class="product-card general">
+      <img src="Vitamin C.jpg" alt="Vitamin C">
+      <h3>Vitamin C 1000mg</h3>
+      <p>₱45.00</p>
+      <button onclick="addToCart('Vitamin C', 45)">Add to Cart</button>
+    </div>
+
+    <div class="product-card general">
+      <img src="amoxicillin.jfif" alt="Amoxicillin">
+      <h3>Amoxicillin</h3>
+      <p>₱40.00</p>
+      <button onclick="addToCart('Amoxicillin', 40)">Add to Cart</button>
+    </div>
+
+    <div class="product-card general">
+      <img src="aspirin.jfif" alt="Aspirin">
+      <h3>Aspirin</h3>
+      <p>₱35.00</p>
+      <button onclick="addToCart('Aspirin', 35)">Add to Cart</button>
+    </div>
+
+    <!-- SANITIZER -->
+    <div class="product-card sanitizer">
+      <img src="handsantizer.jfif" alt="HealthGuard Hand Sanitizer">
+      <h3>HealthGuard Hand Sanitizer 100ml</h3>
+      <p>₱80.00</p>
+      <button onclick="addToCart('HealthGuard Sanitizer', 80)">Add to Cart</button>
+    </div>
+
+    <div class="product-card sanitizer">
+      <img src="alcohol.jfif" alt="70% Alcohol">
+      <h3>PureSafe Alcohol 70%</h3>
+      <p>₱70.00</p>
+      <button onclick="addToCart('PureSafe Alcohol', 70)">Add to Cart</button>
+    </div>
+
+    <div class="product-card sanitizer">
+      <img src="disifectantspray.jfif" alt="Surface Disinfectant">
+      <h3>Surface Disinfectant Spray</h3>
+      <p>₱95.00</p>
+      <button onclick="addToCart('Disinfectant Spray', 95)">Add to Cart</button>
+    </div>
+
+    <div class="product-card sanitizer">
+      <img src="wipes.jfif" alt="Sanitizing Wipes">
+      <h3>Sanitizing Wipes (50s)</h3>
+      <p>₱85.00</p>
+      <button onclick="addToCart('Sanitizing Wipes', 85)">Add to Cart</button>
+    </div>
+
+    <!-- PROTEIN -->
+    <div class="product-card protein">
+      <img src="protein powder.jfif" alt="Whey Protein">
+      <h3>Whey Protein Powder</h3>
+      <p>₱1500.00</p>
+      <button onclick="addToCart('Whey Protein', 1500)">Add to Cart</button>
+    </div>
+
+    <div class="product-card protein">
+      <img src="massgainer.jfif" alt="Mass Gainer">
+      <h3>Mass Gainer</h3>
+      <p>₱1200.00</p>
+      <button onclick="addToCart('Mass Gainer', 1200)">Add to Cart</button>
+    </div>
+
+    <div class="product-card protein">
+      <img src="soyprotein.jfif" alt="Soy Protein">
+      <h3>Soy Protein</h3>
+      <p>₱1100.00</p>
+      <button onclick="addToCart('Soy Protein', 1100)">Add to Cart</button>
+    </div>
+
+    <div class="product-card protein">
+      <img src="caseinprotein.jfif" alt="Casein Protein">
+      <h3>Casein Protein</h3>
+      <p>₱1300.00</p>
+      <button onclick="addToCart('Casein Protein', 1300)">Add to Cart</button>
+    </div>
+
+    <!-- HOME SAFE -->
+    <div class="product-card homeSafe">
+      <img src="mask.jfif" alt="Face Mask">
+      <h3>Face Mask Pack (50s)</h3>
+      <p>₱250.00</p>
+      <button onclick="addToCart('Face Mask Pack', 250)">Add to Cart</button>
+    </div>
+
+    <div class="product-card homeSafe">
+      <img src="gloves.jfif" alt="Gloves">
+      <h3>Disposable Gloves (100pcs)</h3>
+      <p>₱300.00</p>
+      <button onclick="addToCart('Gloves', 300)">Add to Cart</button>
+    </div>
+
+    <div class="product-card homeSafe">
+      <img src="thermometer.jfif" alt="Thermometer">
+      <h3>Thermometer</h3>
+      <p>₱150.00</p>
+      <button onclick="addToCart('Thermometer', 150)">Add to Cart</button>
+    </div>
+
+    <div class="product-card homeSafe">
+      <img src="oximeter.jfif" alt="Oximeter">
+      <h3>Oximeter</h3>
+      <p>₱500.00</p>
+      <button onclick="addToCart('Oximeter', 500)">Add to Cart</button>
+    </div>
+
+    <div class="product-card homeSafe">
+      <img src="firstaidkit.jfif" alt="First Aid Kit">
+      <h3>First Aid Kit</h3>
+      <p>₱600.00</p>
+      <button onclick="addToCart('First Aid Kit', 600)">Add to Cart</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 All Rights Reserved / Health360</p>
+  </footer>
+
+  <script src="medicine.js"></script>
+</body>
+</html>

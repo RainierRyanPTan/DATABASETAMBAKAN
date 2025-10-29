@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reports | Health360</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="admin-container">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2>Health360</h2>
+        <p>Admin Panel</p>
+      </div>
+      <ul class="sidebar-menu">
+        <li onclick="window.location='admin.html'">🏠 Dashboard</li>
+        <li onclick="window.location='manage-users.html'">🧑‍⚕️ Manage Users</li>
+        <li onclick="window.location='pharmacies.html'">🏥 Pharmacies</li>
+        <li onclick="window.location='medicine-stocks.html'">💊 Medicine Stocks</li>
+        <li class="active">📈 Reports</li>
+        <li onclick="window.location='settings.html'">⚙️ Settings</li>
+        <li id="logoutBtn">🚪 Logout</li>
+      </ul>
+    </aside>
+
+    <main class="dashboard-main">
+      <header class="admin-header">
+        <h1>Health Reports</h1>
+        <p>View performance and medicine usage analytics.</p>
+      </header>
+
+      <section class="charts">
+        <div class="chart-card">
+          <h3>Weekly Medicine Sales</h3>
+          <canvas id="reportChart"></canvas>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    const ctx = document.getElementById('reportChart');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+        datasets: [{
+          label: 'Sales (in units)',
+          data: [100, 120, 180, 140, 200, 150, 220],
+          backgroundColor: '#00bfff'
+        }]
+      }
+    });
+  </script>
+</body>
+</html>

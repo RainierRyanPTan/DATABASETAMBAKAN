@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pharmacies | Health360</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="admin-container">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2>Health360</h2>
+        <p>Admin Panel</p>
+      </div>
+      <ul class="sidebar-menu">
+        <li onclick="window.location='admin.html'">🏠 Dashboard</li>
+        <li onclick="window.location='manage-users.html'">🧑‍⚕️ Manage Users</li>
+        <li class="active">🏥 Pharmacies</li>
+        <li onclick="window.location='medicine-stocks.html'">💊 Medicine Stocks</li>
+        <li onclick="window.location='reports.html'">📈 Reports</li>
+        <li onclick="window.location='settings.html'">⚙️ Settings</li>
+        <li id="logoutBtn">🚪 Logout</li>
+      </ul>
+    </aside>
+
+    <main class="dashboard-main">
+      <header class="admin-header">
+        <h1>Registered Pharmacies</h1>
+        <p>List of all pharmacies under Health360 network.</p>
+      </header>
+
+      <section class="table-section">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Pharmacy Name</th>
+              <th>Location</th>
+              <th>Contact</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>101</td><td>MedCare Pharmacy</td><td>Makati City</td><td>09123456789</td><td>Active</td></tr>
+            <tr><td>102</td><td>Wellness Drugs</td><td>Quezon City</td><td>09987654321</td><td>Active</td></tr>
+            <tr><td>103</td><td>HealthFirst Pharmacy</td><td>Cebu City</td><td>09234567890</td><td>Pending</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

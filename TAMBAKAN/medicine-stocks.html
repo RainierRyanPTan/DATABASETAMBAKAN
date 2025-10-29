@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medicine Stocks | Health360</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="admin-container">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2>Health360</h2>
+        <p>Admin Panel</p>
+      </div>
+      <ul class="sidebar-menu">
+        <li onclick="window.location='admin.html'">🏠 Dashboard</li>
+        <li onclick="window.location='manage-users.html'">🧑‍⚕️ Manage Users</li>
+        <li onclick="window.location='pharmacies.html'">🏥 Pharmacies</li>
+        <li class="active">💊 Medicine Stocks</li>
+        <li onclick="window.location='reports.html'">📈 Reports</li>
+        <li onclick="window.location='settings.html'">⚙️ Settings</li>
+        <li id="logoutBtn">🚪 Logout</li>
+      </ul>
+    </aside>
+
+    <main class="dashboard-main">
+      <header class="admin-header">
+        <h1>Medicine Stocks</h1>
+        <p>Monitor current medicine inventory and stock alerts.</p>
+      </header>
+
+      <section class="table-section">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Medicine Name</th>
+              <th>Category</th>
+              <th>Available Stocks</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>501</td><td>Paracetamol</td><td>Pain Relief</td><td>120</td><td>OK</td></tr>
+            <tr><td>502</td><td>Amoxicillin</td><td>Antibiotic</td><td>30</td><td>Low</td></tr>
+            <tr><td>503</td><td>Vitamin C</td><td>Supplement</td><td>0</td><td>Out of Stock</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
