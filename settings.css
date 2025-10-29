@@ -28,8 +28,8 @@ body {
 .nav-links a {
   color: white;
   text-decoration: none;
-  margin: 0 10px;
   font-weight: 500;
+  margin: 0 10px;
 }
 
 .nav-links a:hover {
@@ -69,15 +69,15 @@ body {
 
 .sidebar-menu a {
   display: block;
-  padding: 10px 8px;
   color: inherit;
   text-decoration: none;
+  padding: 10px 8px;
   border-radius: 6px;
   transition: 0.3s;
 }
 
-.sidebar-menu a.active,
-.sidebar-menu a:hover {
+.sidebar-menu a:hover,
+.sidebar-menu a.active {
   background: #0077b6;
   color: white;
 }
@@ -97,56 +97,60 @@ body {
   margin-top: 5px;
 }
 
-/* ===== CHARTS SECTION ===== */
-.charts {
+/* ===== SETTINGS SECTION ===== */
+.settings-section {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
-  margin: 20px 0;
+  margin-top: 20px;
 }
 
-.chart-card {
+.setting-card {
   background: white;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.chart-card h3 {
+.setting-card h3 {
   margin-top: 0;
   color: #0077b6;
 }
 
-/* ===== TABLE SECTION ===== */
-.table-section {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  margin-top: 30px;
+.setting-card label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 500;
 }
 
-.table-section h3 {
-  color: #0077b6;
-  margin-top: 0;
-  margin-bottom: 10px;
-}
-
-.table-section table {
+.setting-card input[type="text"],
+.setting-card input[type="email"],
+.setting-card input[type="password"] {
   width: 100%;
-  border-collapse: collapse;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
 }
 
-.table-section th,
-.table-section td {
-  padding: 10px;
-  border-bottom: 1px solid #f0f4f8;
-  text-align: left;
+.setting-card input[type="checkbox"] {
+  margin-right: 8px;
 }
 
-.table-section thead {
-  background: #f6f9fc;
-  font-weight: 600;
+/* ===== BUTTONS ===== */
+.btn {
+  background: #0077b6;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #0096c7;
 }
 
 /* ===== FOOTER ===== */

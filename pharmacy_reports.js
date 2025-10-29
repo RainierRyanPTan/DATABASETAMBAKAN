@@ -1,50 +1,41 @@
-// reports-pharmacy.js
-(function(){
-  const genBtn = document.getElementById('genBtn');
-  const sendBtn = document.getElementById('sendBtn');
-  const preview = document.getElementById('previewArea');
-  const type = document.getElementById('type');
-  const from = document.getElementById('from');
-  const to = document.getElementById('to');
+// ===== Logout =====
+document.querySelector('.logout').addEventListener('click', () => {
+  alert('Logging out...');
+  window.location.href = 'index.html';
+});
 
-  // sample data
-  const sampleSales = [
-    ['2025-10-20','Paracetamol',50],
-    ['2025-10-21','Amoxicillin',10],
-    ['2025-10-22','Vitamin C',30]
-  ];
+// ===== Report Submission =====
+document.getElementById('reportForm').addEventListener('submit', (e) => {
+  e.preventDefault();
 
-  genBtn.addEventListener('click', ()=>{
-    // for demo: filter sample by date if provided
-    const f = from.value; const t = to.value;
-    let rows = sampleSales;
-    if(f || t){
-      rows = sampleSales.filter(r=>{
-        if(f && r[0] < f) return false;
-        if(t && r[0] > t) return false;
-        return true;
-      });
-    }
-    if(type.value === 'sales'){
-      preview.innerHTML = '<table style="width:100%;border-collapse:collapse;"><thead><tr><th>Date</th><th>Item</th><th>Qty</th></tr></thead><tbody>' +
-        rows.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td></tr>`).join('') +
-        '</tbody></table>';
-    } else {
-      // inventory demo
-      const inv = [
-        ['Paracetamol',120],
-        ['Amoxicillin',8],
-        ['Vitamin C',45]
-      ];
-      preview.innerHTML = '<table style="width:100%;border-collapse:collapse;"><thead><tr><th>Item</th><th>Stock</th></tr></thead><tbody>' +
-        inv.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`).join('') +
-        '</tbody></table>';
-    }
-  });
+  const type = document.getElementById('reportType').value;
+  const desc = document.getElementById('reportDesc').value;
+  const date = new Date().toISOString().split('T')[0];
+  const file = document.getElementById('fileUpload').files[0];
 
-  sendBtn.addEventListener('click', ()=>{
-    if(preview.innerHTML.trim() === '' || preview.innerText.includes('No report')){ alert('Generate a report first'); return; }
-    // simulate sending to admin
-    alert('Report sent to Admin (simulated).');
-  });
-})();
+  if (!type || !desc) {
+    alert('Please fill in all required fields.');
+    return;
+  }
+
+  // Generate a fake report ID
+  const reportID = "#REP" + Math.floor(Math.random() * 9000 + 1000);
+
+  const table = document.querySelector('#reportTable tbody');
+  const newRow = document.createElement('tr');
+  newRow.innerHTML = `
+    <td>${reportID}</td>
+    <td>${type}</td>
+    <td>${desc}</td>
+    <td>${date}</td>
+    <td><span class="status sent">Sent</span></td>
+  `;
+  table.prepend(newRow);
+
+  // Reset the form
+  document.getElementById('reportForm').reset();
+
+  alert(file 
+    ? `Report (${type}) submitted with file: ${file.name}` 
+    : `Report (${type}) submitted successfully!`);
+});

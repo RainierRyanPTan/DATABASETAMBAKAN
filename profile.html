@@ -8,7 +8,7 @@
 </head>
 <body>
 
-  <!-- ✅ NAVBAR -->
+  <!-- ✅ HEADER -->
   <nav class="navbar">
     <div class="nav-left">
       <h2>Health360</h2>
@@ -25,43 +25,60 @@
     </div>
   </nav>
 
-  <!-- ✅ PROFILE MAIN -->
-  <div class="profile-container">
-    <h1>Your Profile</h1>
+  <!-- ✅ PROFILE BODY -->
+  <main class="profile-container">
+    <h1>👤 User Profile</h1>
 
     <div class="profile-card">
-      <h2>Join Semb</h2>
-      <p>User ID: 12-12515</p>
+      <div class="profile-header">
+        <img src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png" alt="User Avatar" class="avatar" />
+        <div>
+          <h2 id="userName">Stephen Curry</h2>
+          <p class="user-id">User ID: 12-12515</p>
+        </div>
+      </div>
 
-      <div class="section">
+      <hr class="divider" />
+
+      <section class="section">
         <h3>Personal Information</h3>
-        <p><strong>Email:</strong> join.semb@email.com</p>
-        <p><strong>Phone:</strong> +1 0395 328 4547</p>
-        <p><strong>Address:</strong> 123 North Street, Iloilo City</p>
-      </div>
+        <div class="info-grid">
+          <p><strong>Email:</strong> <span id="email">stephcurry@gmail.com</span></p>
+          <p><strong>Phone:</strong> <span id="phone">+63901234567</span></p>
+          <p><strong>Address:</strong> <span id="address">La Paz, Iloilo City</span></p>
+        </div>
+      </section>
 
-      <div class="section">
+      <section class="section">
         <h3>Medical Information</h3>
-        <p><strong>Blood Type:</strong> O</p>
-        <p><strong>Height:</strong> 170 cm</p>
-        <p><strong>Weight:</strong> 65 kg</p>
-      </div>
+        <div class="info-grid">
+          <p><strong>Blood Type:</strong> <span id="blood">O+</span></p>
+          <p><strong>Height:</strong> <span id="height">170 cm</span></p>
+          <p><strong>Weight:</strong> <span id="weight">65 kg</span></p>
+          <p><strong>Maintenance Medicine:</strong> <span id="meds">Atorvastatin</span></p>
+        </div>
+      </section>
 
-      <div class="section">
+      <section class="section">
         <h3>Emergency Contact</h3>
-        <p><strong>Name:</strong> State-Semba</p>
-        <p><strong>Phone:</strong> +1(495) 732-4648</p>
-      </div>
+        <div class="info-grid">
+          <p><strong>Name:</strong> <span id="emergencyName">Rodelyn-Lebanan</span></p>
+          <p><strong>Phone:</strong> <span id="emergencyPhone">+63987654321</span></p>
+        </div>
+      </section>
 
+      <div class="button-group">
+        <button id="editProfile">✏️ Edit Profile</button>
+        <button id="saveProfile" class="save hidden">💾 Save</button>
+      </div>
     </div>
-  </div>
+  </main>
 
   <!-- ✅ FOOTER -->
   <footer>
-    <p>© 2025 All Rights Reserved / Health360</p>
+    <p>© 2025 All Rights Reserved | Health360</p>
   </footer>
 
   <script src="profile.js"></script>
-
 </body>
 </html>

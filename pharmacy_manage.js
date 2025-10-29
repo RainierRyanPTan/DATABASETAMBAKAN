@@ -1,59 +1,78 @@
-// manage.js
-(function(){
-  const storageKey = 'pharmacy_meds_v1';
-  let meds = JSON.parse(localStorage.getItem(storageKey) || '[]');
-  if(meds.length === 0){
-    meds = [{id:1,name:'Paracetamol',category:'Analgesic'},{id:2,name:'Amoxicillin',category:'Antibiotic'}];
-    localStorage.setItem(storageKey, JSON.stringify(meds));
-  }
+// ===== Logout =====
+document.querySelector('.logout').addEventListener('click', () => {
+  alert('Logging out...');
+  window.location.href = 'index.html';
+});
 
-  const tbody = document.querySelector('#manageTable tbody');
-  const addBtn = document.getElementById('addBtn');
-  const search = document.getElementById('searchMed');
+// ===== Modal Logic =====
+const addModal = document.getElementById('addModal');
+const openModal = document.getElementById('openAddModal');
+const closeModal = document.getElementById('closeModal');
+const form = document.getElementById('addMedicineForm');
+const table = document.querySelector('#medicineTable tbody');
 
-  function render(list){
-    tbody.innerHTML = '';
-    list.forEach(m=>{
-      const tr = document.createElement('tr');
-      tr.innerHTML = `<td>${escape(m.name)}</td><td>${escape(m.category)}</td><td>
-        <button class="edit" data-id="${m.id}">Edit</button>
-        <button class="del" data-id="${m.id}">Delete</button></td>`;
-      tbody.appendChild(tr);
-    });
-  }
+// Open modal
+openModal.addEventListener('click', () => {
+  addModal.style.display = 'flex';
+});
 
-  function escape(s){ return String(s).replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+// Close modal
+closeModal.addEventListener('click', () => {
+  addModal.style.display = 'none';
+});
 
-  addBtn.addEventListener('click', ()=> openModal());
-  tbody.addEventListener('click', (e)=>{
-    if(e.target.matches('.del')){
-      const id = Number(e.target.dataset.id);
-      if(confirm('Delete this medicine?')){ meds = meds.filter(m=>m.id!==id); save(); render(meds); }
-    } else if(e.target.matches('.edit')){
-      const id = Number(e.target.dataset.id); const m = meds.find(x=>x.id===id); openModal(m);
+// Add new medicine
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const name = document.getElementById('medName').value;
+  const category = document.getElementById('medCategory').value;
+  const price = document.getElementById('medPrice').value;
+  const stock = document.getElementById('medStock').value;
+  const id = "#MED-" + Math.floor(Math.random() * 9000 + 1000);
+
+  const newRow = document.createElement('tr');
+  newRow.innerHTML = `
+    <td>${id}</td>
+    <td>${name}</td>
+    <td>${category}</td>
+    <td>₱${parseFloat(price).toFixed(2)}</td>
+    <td>${stock}</td>
+    <td>
+      <button class="edit-btn">✏️ Edit</button>
+      <button class="delete-btn">🗑️ Delete</button>
+    </td>
+  `;
+  table.appendChild(newRow);
+  addModal.style.display = 'none';
+  form.reset();
+  alert(`${name} added successfully!`);
+});
+
+// ===== Delete Medicine =====
+table.addEventListener('click', (e) => {
+  if (e.target.classList.contains('delete-btn')) {
+    const row = e.target.closest('tr');
+    const medName = row.children[1].textContent;
+    if (confirm(`Are you sure you want to delete ${medName}?`)) {
+      row.remove();
     }
-  });
-
-  search.addEventListener('input', ()=> render(meds.filter(m=> m.name.toLowerCase().includes(search.value.toLowerCase()))));
-
-  function openModal(m){
-    const backdrop = document.createElement('div'); backdrop.className='modal-backdrop';
-    const modal = document.createElement('div'); modal.className='modal';
-    modal.innerHTML = `<h3>${m? 'Edit' : 'Add'} Medicine</h3>
-      <div class="form-row"><label>Name</label><input id="md_name" value="${m? escape(m.name):''}"></div>
-      <div class="form-row"><label>Category</label><input id="md_cat" value="${m? escape(m.category):''}"></div>
-      <div class="modal-actions"><button id="cancel" class="btn outline">Cancel</button><button id="save" class="btn">Save</button></div>`;
-    backdrop.appendChild(modal); document.body.appendChild(backdrop);
-    document.getElementById('cancel').addEventListener('click', ()=>backdrop.remove());
-    document.getElementById('save').addEventListener('click', ()=>{
-      const name = document.getElementById('md_name').value.trim(); if(!name){ alert('Name required'); return; }
-      const cat = document.getElementById('md_cat').value.trim();
-      if(m){ m.name=name; m.category=cat; } else { meds.push({id:Date.now(), name, category:cat}); }
-      save(); render(meds); backdrop.remove();
-    });
   }
+});
 
-  function save(){ localStorage.setItem(storageKey, JSON.stringify(meds)); }
+// ===== Edit Medicine (simplified prompt version) =====
+table.addEventListener('click', (e) => {
+  if (e.target.classList.contains('edit-btn')) {
+    const row = e.target.closest('tr');
+    const name = prompt("Edit Medicine Name:", row.children[1].textContent);
+    const price = prompt("Edit Price (₱):", row.children[3].textContent.replace('₱', ''));
+    const stock = prompt("Edit Stock Quantity:", row.children[4].textContent);
 
-  render(meds);
-})();
+    if (name && price && stock) {
+      row.children[1].textContent = name;
+      row.children[3].textContent = `₱${parseFloat(price).toFixed(2)}`;
+      row.children[4].textContent = stock;
+      alert(`${name} updated successfully!`);
+    }
+  }
+});

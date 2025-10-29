@@ -1,80 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Settings | Health360</title>
-<link rel="stylesheet" href="admin.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings | Health360 Admin</title>
+  <link rel="stylesheet" href="settings.css">
 </head>
 <body>
 
-<nav class="navbar">
-  <div class="nav-left">
-    <h2>Health360</h2>
-    <p>📍 Iloilo Site</p>
-  </div>
-  <div class="nav-links">
-    <a href="index.html" class="logout">Logout</a>
-  </div>
-</nav>
-
-<div class="admin-container">
-  <!-- Sidebar -->
-  <aside class="sidebar">
-    <div class="sidebar-header">
+  <!-- HEADER -->
+  <nav class="navbar">
+    <div class="nav-left">
       <h2>Health360</h2>
-      <p>Admin Panel</p>
+      <p>📍 Iloilo Site</p>
     </div>
-    <ul class="sidebar-menu">
-      <li><a href="admin.html">🏠 Dashboard</a></li>
-      <li><a href="manage_users.html">🧑‍⚕️ Manage Users</a></li>
-      <li><a href="pharmacies.html">🏥 Pharmacies</a></li>
-      <li><a href="stocks.html">💊 Medicine Stocks</a></li>
-      <li><a href="reports.html">📈 Reports</a></li>
-      <li class="active"><a href="settings.html">⚙️ Settings</a></li>
-    </ul>
-  </aside>
+    <div class="nav-links">
+      <a href="index.html" class="logout">Logout</a>
+    </div>
+  </nav>
 
-  <!-- Main Content -->
-  <main class="dashboard-main">
-    <h2>⚙️ Settings</h2>
+  <div class="admin-container">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2>Health360</h2>
+        <p>Admin Panel</p>
+      </div>
+      <ul class="sidebar-menu">
+        <li><a href="admin.html">🏠 Dashboard</a></li>
+        <li><a href="manage_users.html">🧑‍⚕️ Manage Users</a></li>
+        <li><a href="pharmacies.html">🏥 Pharmacies</a></li>
+        <li><a href="medicine_stocks.html">💊 Medicine Stocks</a></li>
+        <li><a href="reports.html">📈 Reports</a></li>
+        <li class="active"><a href="settings.html">⚙️ Settings</a></li>
+      </ul>
+    </aside>
 
-    <section class="settings-section">
-      <h3>Profile Information</h3>
-      <input type="text" placeholder="Admin Full Name">
-      <input type="email" placeholder="Admin Email">
-    </section>
+    <!-- MAIN -->
+    <main class="dashboard-main">
+      <header class="admin-header">
+        <h1>Settings ⚙️</h1>
+        <p>Customize your admin preferences and account information.</p>
+      </header>
 
-    <section class="settings-section">
-      <h3>Change Password</h3>
-      <input type="password" placeholder="Current Password">
-      <input type="password" placeholder="New Password">
-      <input type="password" placeholder="Confirm New Password">
-    </section>
+      <section class="settings-section">
+        <div class="setting-card">
+          <h3>👤 Account Information</h3>
+          <label>Admin Name:</label>
+          <input type="text" id="adminName" value="Admin John">
+          <label>Email:</label>
+          <input type="email" id="adminEmail" value="admin.john@health360.com">
+          <button class="btn save-btn">Save Changes</button>
+        </div>
 
-    <section class="settings-section">
-      <h3>Theme</h3>
-      <select>
-        <option>Light Mode</option>
-        <option>Dark Mode</option>
-      </select>
-    </section>
+        <div class="setting-card">
+          <h3>🔒 Change Password</h3>
+          <label>Current Password:</label>
+          <input type="password" id="currentPass">
+          <label>New Password:</label>
+          <input type="password" id="newPass">
+          <label>Confirm New Password:</label>
+          <input type="password" id="confirmPass">
+          <button class="btn update-pass">Update Password</button>
+        </div>
 
-    <section class="settings-section">
-      <h3>Notifications</h3>
-      <label><input type="checkbox" checked> Email Alerts</label><br>
-      <label><input type="checkbox"> Inventory Alerts</label><br>
-      <label><input type="checkbox"> Sales Updates</label>
-    </section>
+        <div class="setting-card">
+          <h3>🔔 Notifications</h3>
+          <label><input type="checkbox" checked> Receive system alerts</label><br>
+          <label><input type="checkbox"> Low stock reminders</label><br>
+          <label><input type="checkbox" checked> Weekly reports</label>
+          <button class="btn save-btn">Save Preferences</button>
+        </div>
+      </section>
+    </main>
+  </div>
 
-    <button class="save-btn">Save Changes ✅</button>
-  </main>
-</div>
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 All Rights Reserved | Health360</p>
+  </footer>
 
-<footer>
-  <p>© 2025 All Rights Reserved / Health360</p>
-</footer>
-
-<script src="settings.js"></script>
+  <script src="settings.js"></script>
 </body>
 </html>
