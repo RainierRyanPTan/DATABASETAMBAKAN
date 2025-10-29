@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Health360 | Home</title>
+  <link rel="stylesheet" href="home.css" />
+</head>
+<body>
+  <!-- ✅ HEADER copied from medicine.html -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <h2>Health360</h2>
+      <p>📍 Iloilo Site</p>
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="profile.html">Profile</a>
+      <a href="notifications.html">Notifications</a>
+      <a href="medicine.html">Medicine</a>
+      <a href="cart.html">🛒 Cart</a>
+      <a href="#" class="logout">Logout</a>
+    </div>
+  </nav>
+
+  <!-- ✅ MAIN BODY -->
+  <div class="app">
+    <!-- 🔍 Search Bar -->
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search medicines/healthcare products..." />
+      <button id="searchBtn">🔍</button>
+    </div>
+
+    <!-- 🎉 Promo Banner -->
+    <section class="promo">
+      <h3>FLAT 15% OFF<br><span>+20% CASHBACK</span></h3>
+      <p>on 1st medicine order</p>
+      <button id="orderNowBtn">ORDER NOW</button>
+    </section>
+
+    <!-- 🧭 Categories -->
+    <div class="categories">
+      <div class="cat" data-category="all"><img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt=""><p>All</p></div>
+      <div class="cat" data-category="general"><img src="https://cdn-icons-png.flaticon.com/512/2966/2966486.png" alt=""><p>General</p></div>
+      <div class="cat" data-category="sanitizer"><img src="https://cdn-icons-png.flaticon.com/512/3063/3063820.png" alt=""><p>Sanitizer</p></div>
+      <div class="cat" data-category="protein"><img src="https://cdn-icons-png.flaticon.com/512/2717/2717374.png" alt=""><p>Protein</p></div>
+      <div class="cat" data-category="homeSafe"><img src="https://cdn-icons-png.flaticon.com/512/2921/2921822.png" alt=""><p>Home Safe</p></div>
+    </div>
+
+    <!-- 🏪 Product List -->
+    <div class="products">
+      <div class="product general">
+        <img src="https://m.media-amazon.com/images/I/61qz92z6r0L.jpg" alt="Calpol Infant">
+        <h4>Calpol Infant</h4>
+        <p>₱65</p>
+      </div>
+      <div class="product protein">
+        <img src="https://m.media-amazon.com/images/I/81xsmQ0kWdL.jpg" alt="Ensure Powder">
+        <h4>Ensure Powder</h4>
+        <p>₱92</p>
+      </div>
+      <div class="product sanitizer">
+        <img src="https://m.media-amazon.com/images/I/61m7p7PNp9L.jpg" alt="Dettol Antiseptic">
+        <h4>Dettol Antiseptic</h4>
+        <p>₱75</p>
+      </div>
+    </div>
+
+    <!-- 🧪 COVID Test Section -->
+    <section class="covid-test">
+      <img src="https://cdn-icons-png.flaticon.com/512/387/387561.png" alt="Covid Test">
+      <div>
+        <h4>Do your own COVID-19 test</h4>
+        <p>Follow the instructions to do your own test safely at home.</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- ✅ FOOTER copied from medicine.html -->
+  <footer>
+    <p>© 2025 All Rights Reserved / Health360</p>
+  </footer>
+
+  <script src="home.js"></script>
+</body>
+</html>
