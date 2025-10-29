@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pharmacy Staff Dashboard | Health360</title>
+  <link rel="stylesheet" href="pharmacy.css">
+</head>
+<body>
+  <!-- HEADER with Logout -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <h2>Health360</h2>
+      <p>📍 Iloilo Site</p>
+    </div>
+    <div class="nav-links">
+      <a href="login.html" class="logout">Logout</a>
+    </div>
+  </nav>
+
+  <!-- DASHBOARD CONTENT -->
+  <div class="dashboard">
+    <header class="dash-header">
+      <h2>🏥 Pharmacy Staff</h2>
+      <p>Manage medicine stock and communicate with Admin.</p>
+    </header>
+
+    <section class="dash-content">
+      <h3>Welcome, Pharmacy Staff!</h3>
+      <p>Monitor inventory, update stocks, and send status reports to Admin.</p>
+
+      <div class="pharmacy-grid">
+        <div class="card">
+          <h4>💊 Inventory</h4>
+          <p>Check and update stock levels of medicines.</p>
+          <button class="update-stock-btn">Update Stock</button>
+        </div>
+        <div class="card">
+          <h4>🚚 Orders</h4>
+          <p>View and process incoming delivery requests.</p>
+          <button class="process-orders-btn">Process Orders</button>
+        </div>
+        <div class="card">
+          <h4>⚠️ Low Stock Alerts</h4>
+          <p>View medicines that need immediate restocking.</p>
+          <button class="low-stock-btn">Check Alerts</button>
+        </div>
+        <div class="card">
+          <h4>📊 Reports</h4>
+          <p>Send inventory status and sales report to Admin.</p>
+          <button class="send-report-btn">Send Report</button>
+        </div>
+        <div class="card">
+          <h4>📝 Manage Medicine Data</h4>
+          <p>Add or remove medicines from your pharmacy database.</p>
+          <button class="manage-data-btn">Manage Data</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 All Rights Reserved / Health360</p>
+  </footer>
+
+  <script src="pharmacy.js"></script>
+</body>
+</html>
