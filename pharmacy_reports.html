@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Pharmacy Reports | Health360</title>
+  <link rel="stylesheet" href="pharmacy.css">
+  <link rel="stylesheet" href="reports-pharmacy.css">
+</head>
+<body>
+  <nav class="navbar"><div class="nav-left"><h2>Health360</h2><p>📍 Iloilo Site</p></div><div class="nav-links"><a href="login.html" class="logout">Logout</a></div></nav>
+
+  <div class="dashboard">
+    <header class="dash-header"><h2>📊 Reports</h2><p>Generate & send inventory or sales reports to Admin.</p></header>
+
+    <main class="dash-content">
+      <section class="controls">
+        <select id="type"><option value="sales">Sales</option><option value="inventory">Inventory</option></select>
+        <input id="from" type="date">
+        <input id="to" type="date">
+        <button id="genBtn" class="btn">Generate</button>
+        <button id="sendBtn" class="btn outline">Send to Admin</button>
+      </section>
+
+      <section id="preview" class="table-section"><h3>Preview</h3><div id="previewArea">No report generated yet.</div></section>
+    </main>
+  </div>
+
+  <footer><p>© 2025 All Rights Reserved / Health360</p></footer>
+  <script src="reports-pharmacy.js"></script>
+</body>
+</html>

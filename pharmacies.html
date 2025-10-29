@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<nav class="navbar">
+<div class="nav-left">
+<h2>Health360</h2>
+<link rel="stylesheet" href="pharmacies.css">
+<p>📍 Iloilo Site</p>
+</div>
+<div class="nav-links">
+<a href="index.html" class="logout">Logout</a>
+</div>
+</nav>
+
+
+<div class="admin-container">
+<aside class="sidebar">
+<div class="sidebar-header">
+<h2>Health360</h2>
+<p>Admin Panel</p>
+</div>
+<ul class="sidebar-menu">
+<li>🏠 Dashboard</li>
+<li>🧑‍⚕️ Manage Users</li>
+<li class="active">🏥 Pharmacies</li>
+<li>💊 Medicine Stocks</li>
+<li>📈 Reports</li>
+<li>⚙️ Settings</li>
+</ul>
+</aside>
+
+
+<main class="dashboard-main">
+<header class="admin-header">
+<h1>Pharmacies</h1>
+<p>Manage pharmacy entries, contact details and status.</p>
+</header>
+
+
+<section class="controls">
+<div class="control-row">
+<select id="sortCity">
+<option value="">Sort by city</option>
+<option value="asc">City A → Z</option>
+<option value="desc">City Z → A</option>
+</select>
+<button id="addPharmacyBtn">+ Add Pharmacy</button>
+</div>
+</section>
+
+
+<section class="list-section" id="pharmList"></section>
+
+
+<section class="map-placeholder">
+<h3>Map (placeholder)</h3>
+<div class="map-box">Map would appear here — integrate Google Maps or Leaflet later.</div>
+</section>
+
+
+</main>
+</div>
+
+
+<footer>
+<p>© 2025 All Rights Reserved / Health360</p>
+</footer>
+
+
+<script src="pharmacies.js"></script>
+</body>
+</html>

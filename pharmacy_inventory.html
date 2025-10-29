@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Inventory | Pharmacy | Health360</title>
+  <link rel="stylesheet" href="pharmacy.css">
+  <link rel="stylesheet" href="inventory.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <nav class="navbar">
+    <div class="nav-left"><h2>Health360</h2><p>📍 Iloilo Site</p></div>
+    <div class="nav-links"><a href="login.html" class="logout">Logout</a></div>
+  </nav>
+
+  <div class="dashboard">
+    <header class="dash-header"><h2>💊 Inventory Management</h2><p>View and update medicine stocks.</p></header>
+
+    <main class="dash-content">
+      <section class="controls">
+        <input id="invSearch" placeholder="Search medicine by name..." />
+        <button id="addMedBtn" class="btn">+ Add Medicine</button>
+      </section>
+
+      <section class="table-section">
+        <table id="invTable">
+          <thead><tr><th>Name</th><th>Category</th><th>Stock</th><th>Expiry</th><th>Actions</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <footer><p>© 2025 All Rights Reserved / Health360</p></footer>
+  <script src="inventory.js"></script>
+</body>
+</html>

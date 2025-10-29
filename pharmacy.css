@@ -1,0 +1,81 @@
+/* ===== GENERAL STYLES ===== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f7f9fc;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0077b6;
+  color: white;
+  padding: 10px 30px;
+}
+
+.nav-left h2 { margin: 0; }
+.nav-left p { margin: 0; font-size: 0.8em; }
+
+.nav-links a.logout {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 15px;
+  background: #ff4b5c;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.nav-links a.logout:hover { background: #ff6b81; }
+
+/* DASHBOARD LAYOUT */
+.dashboard { max-width: 1200px; margin: 20px auto; padding: 0 20px; }
+.dash-header h2 { margin: 0; color: #0077b6; }
+.dash-header p { margin: 5px 0 20px; color: #555; }
+
+/* GRID CARDS */
+.pharmacy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.card h4 { margin: 0 0 10px 0; color: #0077b6; }
+.card p { font-size: 14px; margin-bottom: 15px; color: #555; }
+
+.card button {
+  padding: 8px 15px;
+  background: #0077b6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card button:hover { background: #0096c7; }
+
+/* FOOTER */
+footer {
+  text-align: center;
+  background: #023e8a;
+  color: white;
+  padding: 15px;
+  margin-top: 40px;
+}

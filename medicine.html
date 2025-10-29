@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Health360 | Medicine</title>
+  <link rel="stylesheet" href="medicine.css" />
+</head>
+<body>
+  <!-- ✅ HEADER copied from index.html -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <h2>Health360</h2>
+      <p>📍 Iloilo Site</p>
+    </div>
+
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="profile.html">Profile</a>
+      <a href="notifications.html">Notifications</a>
+      <a href="medicine.html" class="active">Medicine</a>
+      <a href="cart.html">🛒 Cart</a>
+      <a href="index.html" class="logout">Logout</a>
+    </div>
+  </nav>
+
+  <!-- ✅ BODY: Medicine List -->
+  <section class="categories">
+    <button class="category active" data-category="all">All</button>
+    <button class="category" data-category="general">General</button>
+    <button class="category" data-category="sanitizer">Sanitizer</button>
+    <button class="category" data-category="protein">Protein</button>
+    <button class="category" data-category="homeSafe">Home Safe</button>
+  </section>
+
+  <section id="productList" class="product-list">
+    <!-- FULL PRODUCT LIST -->
+    <div class="product-card general">
+      <img src="paracetamol.jpg" alt="Paracetamol">
+      <h3>Paracetamol</h3>
+      <p>₱25.00</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-card general">
+      <img src="ibuprofen.jpg" alt="Ibuprofen">
+      <h3>Ibuprofen</h3>
+      <p>₱30.00</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-card general">
+      <img src="Vitamin C.jpg" alt="Vitamin C">
+      <h3>Vitamin C 1000mg</h3>
+      <p>₱45.00</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-card sanitizer">
+      <img src="dettol.jpg" alt="Dettol Antiseptic">
+      <h3>Dettol Antiseptic</h3>
+      <p>₱75.00</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-card protein">
+      <img src="ensure.jpg" alt="Ensure Powder">
+      <h3>Ensure Powder</h3>
+      <p>₱92.00</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-card homeSafe">
+      <img src="firstaidkit.jpg" alt="First Aid Kit">
+      <h3>First Aid Kit</h3>
+      <p>₱150.00</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-card general">
+      <img src="coughsyrup.jpg" alt="Cough Syrup">
+      <h3>Cough Syrup</h3>
+      <p>₱55.00</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-card sanitizer">
+      <img src="handgel.jpg" alt="Hand Sanitizer">
+      <h3>Hand Sanitizer</h3>
+      <p>₱60.00</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-card protein">
+      <img src="proteinshake.jpg" alt="Protein Shake">
+      <h3>Protein Shake</h3>
+      <p>₱120.00</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-card homeSafe">
+      <img src="mask.jpg" alt="Face Mask">
+      <h3>Face Mask</h3>
+      <p>₱20.00</p>
+      <button>Add to Cart</button>
+    </div>
+  </section>
+
+  <!-- ✅ FOOTER copied from index.html -->
+  <footer>
+    <p>© 2025 All Rights Reserved / Health360</p>
+  </footer>
+
+  <script src="medicine.js"></script>
+</body>
+</html>

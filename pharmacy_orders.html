@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Orders | Pharmacy | Health360</title>
+  <link rel="stylesheet" href="pharmacy.css">
+  <link rel="stylesheet" href="orders.css">
+</head>
+<body>
+  <nav class="navbar"><div class="nav-left"><h2>Health360</h2><p>📍 Iloilo Site</p></div><div class="nav-links"><a href="login.html" class="logout">Logout</a></div></nav>
+
+  <div class="dashboard">
+    <header class="dash-header"><h2>🚚 Orders Management</h2><p>Process incoming delivery requests.</p></header>
+    <main class="dash-content">
+      <section class="controls">
+        <button id="newOrderBtn" class="btn">+ New Order</button>
+        <select id="filterStatus"><option value="">All</option><option value="pending">Pending</option><option value="approved">Approved</option><option value="declined">Declined</option></select>
+      </section>
+
+      <section class="list-section">
+        <ul id="ordersList"></ul>
+      </section>
+    </main>
+  </div>
+
+  <footer><p>© 2025 All Rights Reserved / Health360</p></footer>
+  <script src="orders.js"></script>
+</body>
+</html>

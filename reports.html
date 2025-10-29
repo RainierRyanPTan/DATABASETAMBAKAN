@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<nav class="navbar">
+<div class="nav-left">
+<h2>Health360</h2>
+<p>📍 Iloilo Site</p>
+</div>
+<div class="nav-links">
+    <link rel="stylesheet" href="reports.css">
+<a href="index.html" class="logout">Logout</a>
+</div>
+</nav>
+
+
+<div class="admin-container">
+<!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2>Health360</h2>
+        <p>Admin Panel</p>
+      </div>
+      <ul class="sidebar-menu">
+        <li ><a href="admin.html">🏠 Dashboard</a></li>
+        <li><a href="manage_users.html">🧑‍⚕️ Manage Users</a></li>
+        <li><a href="pharmacies.html">🏥 Pharmacies</a></li>
+        <li><a href="stocks.html">💊 Medicine Stocks</a></li>
+        <li class="active"><a href="reports.html">📈 Reports</a></li>
+        <li><a href="settings.html">⚙️ Settings</a></li>
+      </ul>
+    </aside>
+
+
+<main class="dashboard-main">
+<header class="admin-header">
+<h1>Reports</h1>
+<p>Generate sales and usage reports. Download CSV or view charts.</p>
+</header>
+
+
+<section class="controls">
+<div class="control-row">
+<input type="date" id="fromDate">
+<input type="date" id="toDate">
+<button id="generateReport">Generate</button>
+<button id="downloadCsv">Download CSV</button>
+</div>
+</section>
+
+
+<section class="charts">
+<div class="chart-card">
+<h3>Sales Trend</h3>
+<canvas id="reportSalesChart"></canvas>
+</div>
+<div class="chart-card">
+<h3>Top Medicines</h3>
+<canvas id="reportTopChart"></canvas>
+</div>
+</section>
+
+
+</main>
+</div>
+
+
+<footer>
+<p>© 2025 All Rights Reserved / Health360</p>
+</footer>
+
+
+<script src="reports.js"></script>
+</body>
+</html>

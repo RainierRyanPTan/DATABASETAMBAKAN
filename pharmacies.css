@@ -1,0 +1,197 @@
+/* ===== GLOBAL ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f4f7fc;
+  color: #222;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  background: #004aad;
+  color: #fff;
+  padding: 12px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.nav-left p {
+  margin: 0;
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.logout {
+  color: #fff;
+  background: #d63031;
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: .3s;
+}
+
+.logout:hover {
+  background: #b51c1c;
+}
+
+/* ===== LAYOUT ===== */
+.admin-container {
+  display: flex;
+  min-height: 90vh;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  width: 250px;
+  background: #002c70;
+  color: #fff;
+  padding: 25px 18px;
+}
+
+.sidebar-header h2 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.sidebar-header p {
+  margin-bottom: 20px;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.sidebar-menu {
+  list-style: none;
+}
+
+.sidebar-menu li {
+  padding: 12px 14px;
+  font-size: 14px;
+  margin: 3px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  opacity: .85;
+  transition: .3s;
+}
+
+.sidebar-menu li:hover,
+.sidebar-menu li.active {
+  background: #0057ce;
+  opacity: 1;
+  font-weight: 600;
+}
+
+/* ===== MAIN CONTENT ===== */
+.dashboard-main {
+  flex: 1;
+  padding: 32px;
+}
+
+.admin-header h1 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.admin-header p {
+  color: #555;
+  margin-bottom: 24px;
+}
+
+/* ===== CONTROLS ===== */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.control-row select,
+.control-row button {
+  padding: 10px 14px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.control-row button {
+  background: #0077ff;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  transition: .3s;
+}
+
+.control-row button:hover {
+  background: #005fcc;
+}
+
+/* ===== PHARMACY LIST SECTION ===== */
+.list-section {
+  background: #fff;
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  min-height: 240px;
+  border: 1px solid #e5e9f2;
+}
+
+/* ===== MAP PLACEHOLDER ===== */
+.map-placeholder {
+  background: #fff;
+  border-radius: 14px;
+  padding: 22px;
+  margin-top: 25px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.map-box {
+  height: 250px;
+  background: #d9e3f3;
+  border-radius: 12px;
+  border: 1px solid #c7d4ea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #444;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  width: 100%;
+  background: #004aad;
+  color: #fff;
+  padding: 14px;
+  text-align: center;
+  font-size: 13px;
+  margin-top: 24px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .admin-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    gap: 12px;
+  }
+
+  .sidebar-menu li {
+    white-space: nowrap;
+  }
+}

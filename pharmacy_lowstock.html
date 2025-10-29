@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Low Stock Alerts | Pharmacy | Health360</title>
+  <link rel="stylesheet" href="pharmacy.css">
+  <link rel="stylesheet" href="lowstock.css">
+</head>
+<body>
+  <nav class="navbar"><div class="nav-left"><h2>Health360</h2><p>📍 Iloilo Site</p></div><div class="nav-links"><a href="login.html" class="logout">Logout</a></div></nav>
+
+  <div class="dashboard">
+    <header class="dash-header"><h2>⚠️ Low Stock Alerts</h2><p>Medicines that need immediate restock.</p></header>
+
+    <main class="dash-content">
+      <section class="controls">
+        <label>Threshold: <input id="threshold" type="number" value="10" min="1" style="width:80px;padding:6px;border-radius:6px;border:1px solid #d3dce6;"></label>
+        <button id="checkBtn" class="btn">Check</button>
+      </section>
+
+      <section id="alertsList" class="list-section"></section>
+    </main>
+  </div>
+
+  <footer><p>© 2025 All Rights Reserved / Health360</p></footer>
+  <script src="lowstock.js"></script>
+</body>
+</html>

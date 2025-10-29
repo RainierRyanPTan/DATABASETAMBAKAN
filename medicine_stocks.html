@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<nav class="navbar">
+<div class="nav-left">
+<h2>Health360</h2>
+<p>📍 Iloilo Site</p>
+</div>
+<div class="nav-links">
+<a href="index.html" class="logout">Logout</a>
+</div>
+</nav>
+
+
+<div class="admin-container">
+<aside class="sidebar">
+<div class="sidebar-header">
+<h2>Health360</h2>
+<p>Admin Panel</p>
+</div>
+<ul class="sidebar-menu">
+<li>🏠 Dashboard</li>
+<li>🧑‍⚕️ Manage Users</li>
+<li>🏥 Pharmacies</li>
+<li class="active">💊 Medicine Stocks</li>
+<li>📈 Reports</li>
+<li>⚙️ Settings</li>
+</ul>
+</aside>
+
+
+<main class="dashboard-main">
+<header class="admin-header">
+<h1>Medicine Stocks</h1>
+<p>Track medicines, stock levels, expiration dates and categories.</p>
+</header>
+
+
+<section class="controls">
+<div class="control-row">
+<select id="filterCategory">
+<option value="">All categories</option>
+<option value="analgesic">Analgesic</option>
+<option value="antibiotic">Antibiotic</option>
+<option value="vitamin">Vitamin</option>
+</select>
+<button id="addMedicineBtn">+ Add Medicine</button>
+</div>
+</section>
+
+
+<section class="table-section">
+<table id="medTable">
+<thead>
+<tr><th>Name</th><th>Category</th><th>Stock</th><th>Expiry</th><th>Actions</th></tr>
+</thead>
+<tbody></tbody>
+</table>
+</section>
+
+
+</main>
+</div>
+
+
+<footer>
+<p>© 2025 All Rights Reserved / Health360</p>
+</footer>
+
+
+<script src="medicine_stocks.js"></script>
+</body>
+</html>

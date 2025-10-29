@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manage Users | Health360</title>
+<link rel="stylesheet" href="admin.css">
+<link rel="stylesheet" href="admin-pages.css">
+</head>
+<body>
+<!-- HEADER -->
+<nav class="navbar">
+<div class="nav-left">
+<h2>Health360</h2>
+<p>📍 Iloilo Site</p>
+</div>
+<div class="nav-links">
+<a href="index.html" class="logout">Logout</a>
+</div>
+</nav>
+
+
+<div class="admin-container">
+<!-- Sidebar -->
+<aside class="sidebar">
+      <div class="sidebar-header">
+        <h2>Health360</h2>
+        <p>Admin Panel</p>
+      </div>
+      <ul class="sidebar-menu">
+        <li class="active"><a href="admin.html">🏠 Dashboard</a></li>
+        <li><a href="manage_users.html">🧑‍⚕️ Manage Users</a></li>
+        <li><a href="pharmacies.html">🏥 Pharmacies</a></li>
+        <li><a href="stocks.html">💊 Medicine Stocks</a></li>
+        <li><a href="reports.html">📈 Reports</a></li>
+        <li><a href="settings.html">⚙️ Settings</a></li>
+      </ul>
+    </aside>
+
+
+<!-- Main Content -->
+<main class="dashboard-main">
+<header class="admin-header">
+<h1>Manage Users</h1>
+<p>View, add, edit and manage user roles and status.</p>
+</header>
+
+
+<section class="controls">
+<div class="control-row">
+<input id="searchUser" placeholder="Search users by name or email...">
+<button id="addUserBtn">+ Add User</button>
+</div>
+</section>
+
+
+<section class="table-section">
+<table id="usersTable">
+<thead>
+<tr><th>Name</th><th>Email</th><th>Role</th><th>Status</th><th>Actions</th></tr>
+</thead>
+<tbody></tbody>
+</table>
+</section>
+
+
+</main>
+</div>
+
+
+<!-- FOOTER -->
+</html>

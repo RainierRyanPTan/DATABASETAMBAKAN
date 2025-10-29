@@ -1,0 +1,7 @@
+/* inventory.css (page-specific) */
+.controls { display:flex; gap:10px; align-items:center; margin:16px 0; }
+.controls input { padding:8px; border-radius:6px; border:1px solid #d3dce6; flex:1; }
+.btn { background:#0077b6; color:white; padding:8px 12px; border-radius:6px; border:none; cursor:pointer; }
+.table-section table { width:100%; border-collapse:collapse; background:white; border-radius:8px; overflow:hidden; box-shadow:0 2px 6px rgba(0,0,0,0.05); }
+.table-section th, .table-section td { padding:10px 12px; border-bottom:1px solid #f0f4f8; }
+.low-row td { background:#fff5f5; }

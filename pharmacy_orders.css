@@ -1,0 +1,9 @@
+/* orders.css */
+.controls { display:flex; gap:10px; align-items:center; margin:16px 0; }
+#ordersList { list-style:none; padding:0; margin:0; display:grid; gap:10px; }
+.order-card { background:white; padding:12px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.06); display:flex; justify-content:space-between; align-items:center; }
+.order-info { max-width:70%; }
+.order-actions button { margin-left:8px; }
+.status-pending { color:#ff9800; font-weight:600; }
+.status-approved { color:#28a745; font-weight:600; }
+.status-declined { color:#dc3545; font-weight:600; }

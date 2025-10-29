@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Manage Medicines | Pharmacy | Health360</title>
+  <link rel="stylesheet" href="pharmacy.css">
+  <link rel="stylesheet" href="manage.css">
+</head>
+<body>
+  <nav class="navbar"><div class="nav-left"><h2>Health360</h2><p>📍 Iloilo Site</p></div><div class="nav-links"><a href="login.html" class="logout">Logout</a></div></nav>
+
+  <div class="dashboard">
+    <header class="dash-header"><h2>📝 Manage Medicine Data</h2><p>Add, edit or delete medicine records for your pharmacy.</p></header>
+
+    <main class="dash-content">
+      <section class="controls">
+        <button id="addBtn" class="btn">+ Add Medicine</button>
+        <input id="searchMed" placeholder="Search medicines..." />
+      </section>
+
+      <section class="table-section">
+        <table id="manageTable"><thead><tr><th>Name</th><th>Category</th><th>Actions</th></tr></thead><tbody></tbody></table>
+      </section>
+    </main>
+  </div>
+
+  <footer><p>© 2025 All Rights Reserved / Health360</p></footer>
+  <script src="manage.js"></script>
+</body>
+</html>

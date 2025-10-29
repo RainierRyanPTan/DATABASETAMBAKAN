@@ -1,0 +1,4 @@
+/* manage.css */
+.controls { display:flex; gap:10px; margin:12px 0; align-items:center; }
+.controls input { padding:8px; border-radius:6px; border:1px solid #d3dce6; flex:1; }
+#manageTable td, #manageTable th { padding:8px 10px; border-bottom:1px solid #f0f4f8; }
